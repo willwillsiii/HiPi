@@ -18,7 +18,6 @@ app.config['SECRET_KEY'] = '2gho^!2Lciaj>Hyn<&2bz(2$1Fhz*2#$'
 @app.route('/', methods=['GET', 'POST'])
 def index():
     tts_form = TextForm()
-    print(tts_form.tts_text.data)
     if tts_form.validate_on_submit():
         flash('Sent!')
         print(tts_form.tts_text.data)
