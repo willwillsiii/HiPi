@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HiPy</h1>
+Send a greeting that will play when someone enters NAN 514!
+<form action="" method="post">
+{{ form.hidden_tag() }}
+<p>
+{{ form.tts_text.label }}<br>
+{{ form.tts_text(size=32) }}
+</p>
+<p>{{ form.submit() }}
+<span id="flashes" style="color: red;">
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+{{ message }}
+{% endfor %}
+{% endif %}
+{% endwith %}
+</span>
+</p>
+</form>
+<script>
+setTimeout(function() {
+	document.getElementById("flashes").style.display="none";
+}, 3000);
+</script>
+</body>
+</html>
