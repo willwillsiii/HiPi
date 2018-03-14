@@ -1,9 +1,52 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style type="text/css">
+body {
+	background-image: url(bckgrnd.JPG);
+	background-size: cover;
+}
+section{
+	border-style: solid;
+	margin: 40px;
+	padding: 50px;
+	background-color:hsla(214,100%,97%,0.82);
+	font-size: 30px;
+	}
+input{
+	padding: 20px;
+	}
+button{
+	background-color: rgba(196,46,84,1.00);
+	color: #E9E3E4;
+	font-size: 25px;
+	border-radius: 20px;
+	border-color: black;
+	padding: 14px 40px;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+	
+	
+</style>
+</head>
+<header>
+	<center><img src="HiPy.png" alt="HiPy" title="HiPy"/></center>
+</header>
 <body>
-<h1>HiPy</h1>
-Send a greeting that will play when someone enters NAN 514!
-<form action="" method="post">
+<center>
+	<section>
+  		<h1>Send a greeting that will play when someone enters NAN 514!</h1>
+  
+<!--  		<form action="where to send message to" method="post" name="form1" id="form1">-->
+		<form action="" method="post" name="form1" id="form1">
+    	<label for="Message"></label>
+    	<br>
+   	 	<input name="message" type="text" required id="message" form="form1" size="150">
+    	<br>
+    	<br>
+		<button name="submit" type="submit" id="submit" form="form1" value="Submit"><b>Submit</b></button>
+	  </form>
+	</section>
 {{ form.hidden_tag() }}
 <p>
 {{ form.tts_text.label }}<br>
