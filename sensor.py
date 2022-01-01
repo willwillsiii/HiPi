@@ -16,7 +16,7 @@ try:
         GPIO.wait_for_edge(16, GPIO.FALLING)
         print("Ready!")
 except KeyboardInterrupt:
-    print("\nCloing ...")
+    print("\nClosing ...")
 finally:
     GPIO.cleanup()
 
